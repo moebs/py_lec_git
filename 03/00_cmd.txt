@@ -1,0 +1,64 @@
+0. source code : https://github.com/moebs/py_lec_git
+
+1. 터미널을 powershell에서 cmd로 변경
+
+- 보기 -> 명령 팔레트 -> slect default profile
+
+- https://hianna.tistory.com/349
+
+
+
+2. 설치된 가상환경 확인 (https://dandyrilla.github.io/2018-10-01/conda-env/)
+
+- conda info --envs
+
+
+
+3. 가상환경 생성
+
+- conda create -n py36_media(가상환경 이름) python=3.6 ipykernel
+
+- conda info --envs
+
+4. 가상환경으로 들어가기
+
+- conda activate py36_media
+
+
+5. 라이브러리 설치
+
+- conda install matplotlib
+
+- pip install mediapipe
+
+- conda list
+
+
+
+5. 가상환경 이름변경(복사)
+
+- conda create -n py36_mediapipe --clone py36_midia
+
+- conda info --envs
+
+6. 가상환경 삭제
+
+- conda remove --name py36_mediapipe --all
+
+- conda info --envs
+
+
+
+7. 가상환경 공유 (https://mentha2.tistory.com/46)
+
+- conda activate py36_media
+
+- conda env export > py36_mediapipe.yml
+
+- conda env create -f py36_mediapipe.yml
+
+- conda info --envs
+
+- conda remove --name py36_media --all
+
+- conda info --envs
